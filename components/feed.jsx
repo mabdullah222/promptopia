@@ -9,7 +9,7 @@ const Feed = () => {
 
   const getPosts = async (query) => {
     try {
-      const response = await axios.get(`/api/posts?query=${query}`)
+      const response = await axios.get(`http://localhost:3000/api/posts?query=${query}`)
       if (response.status == 200) {
         setPosts(response.data.data)
       }
