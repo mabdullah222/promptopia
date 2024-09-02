@@ -35,7 +35,7 @@ const Auth=()=>{
     },[data])
 
     const register=useCallback(async ()=>{
-        const response=await axios.post('http://localhost:3000/api/register',{...data})
+        const response=await axios.post('api/register',{...data})
         login()
     },[data,login])
 

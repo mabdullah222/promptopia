@@ -24,7 +24,7 @@ const Form = () => {
     try{
     setSubmit(true)
     const hashtags=data.hashtags.split(",")
-    const response=await axios.post("http://localhost:3000/api/posts",{...data,hashtags:hashtags})
+    const response=await axios.post("api/posts",{...data,hashtags:hashtags})
     if(response.status==200){
       
       console.log(response.data)
